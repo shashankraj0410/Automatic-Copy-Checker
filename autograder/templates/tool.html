@@ -1,0 +1,316 @@
+
+<style>
+    :root {
+      --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+      --primary-color: #f3f9fa;
+      --secondary-color: #000000;
+    }
+    
+    .auto-checker-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--secondary-color);
+      overflow: hidden;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 96px;
+    }
+    
+    .logo {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 36px;
+      line-height: 39px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 85px;
+    }
+    
+    .nav-item {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 20px;
+      line-height: 21.72px;
+      -webkit-text-stroke: 0.5px var(--primary-color);
+    }
+    
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .notification-btn {
+      padding: 8px 11px;
+      background: var(--primary-color);
+      border-radius: 6px;
+      box-shadow: 0 0 10px 0 var(--primary-color);
+    }
+    
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/27fc9adc-65f9-41a6-b32b-72db39644456.png) no-repeat center;
+      background-size: cover;
+    }
+    
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 48px;
+      line-height: 52px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 4.8px;
+      -webkit-text-stroke: 0.5px var(--primary-color);
+      margin-bottom: 30px;
+    }
+    
+    .section-subtitle {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.8px;
+    }
+    
+    .tools-section {
+      margin-top: 100px;
+      text-align: center;
+    }
+    
+    .tools-title {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 32px;
+      line-height: 34.752px;
+      text-transform: uppercase;
+      letter-spacing: 3.2px;
+      -webkit-text-stroke: 0.5px var(--primary-color);
+      margin-bottom: 30px;
+    }
+    
+    .tools-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    
+    .tool-btn {
+      padding: 10px 25px;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 20px;
+      line-height: 21.72px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .tool-btn-primary {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+    }
+    
+    .tool-btn-secondary {
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    
+    .upload-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      padding: 50px 90px;
+      border: 4px dashed var(--primary-color);
+      border-radius: 12px;
+    }
+    
+    .upload-box {
+      width: 394px;
+      text-align: center;
+    }
+    
+    .upload-title {
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+      line-height: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2.8px;
+      margin-bottom: 40px;
+    }
+    
+    .upload-area {
+      border: 4px dashed var(--primary-color);
+      border-radius: 26px;
+      padding: 48px 0;
+      position: relative;
+    }
+    
+    .upload-icon {
+      width: 46px;
+      height: 46px;
+      margin-bottom: 48px;
+    }
+    
+    .upload-text {
+      color: var(--primary-color);
+      font-family: Inter, var(--default-font);
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .upload-subtext {
+      color: rgba(243, 249, 250, 0.7);
+      font-family: Inter, var(--default-font);
+      font-size: 15px;
+      line-height: 18px;
+    }
+    
+    .browse-btn {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 16px 30px;
+      background: #ffffff;
+      border: 2px solid #cbd0dc;
+      border-radius: 6px;
+      color: var(--secondary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 30px;
+      line-height: 32.58px;
+      cursor: pointer;
+    }
+    
+    .start-checking-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 100px auto;
+      padding: 20px 92px;
+      background: var(--secondary-color);
+      border: 2px solid var(--primary-color);
+      border-radius: 6px;
+      box-shadow: 0 0 5px 0 var(--primary-color);
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 32px;
+      line-height: 34.752px;
+      letter-spacing: 0.1px;
+      -webkit-text-stroke: 0.5px var(--primary-color);
+      cursor: pointer;
+    }
+    
+    .start-checking-icon {
+      width: 31px;
+      height: 31px;
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 24px 96px;
+      color: var(--primary-color);
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+      line-height: 15px;
+      letter-spacing: 0.04px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <section class="auto-checker-container">
+      <header class="header">
+        <h1 class="logo">Auto Checker</h1>
+        <nav class="nav-menu">
+          <a href="#" class="nav-item">Home</a>
+          <div class="user-actions">
+            <button class="notification-btn" aria-label="Notifications">
+              <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/93df126a-9855-4de5-85be-8d32b028a2a8.png" alt="Notification icon" width="24" height="24">
+            </button>
+            <img class="user-avatar" src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/27fc9adc-65f9-41a6-b32b-72db39644456.png" alt="User avatar">
+          </div>
+        </nav>
+      </header>
+    
+      <main class="main-content">
+        <h2 class="section-title">Automated Grading Tools</h2>
+        <p class="section-subtitle">Efficiently grade exams with our suite of tools.</p>
+    
+        <section class="tools-section">
+          <h3 class="tools-title">Tools</h3>
+          <div class="tools-container">
+            <button class="tool-btn tool-btn-primary">Long Answer</button>
+            <button class="tool-btn tool-btn-secondary">Short Answer</button>
+            <button class="tool-btn tool-btn-secondary">True & False</button>
+            <button class="tool-btn tool-btn-secondary">MCQ</button>
+          </div>
+        </section>
+    
+        <section class="upload-section">
+          <div class="upload-box">
+            <h4 class="upload-title">Upload Original Answer Sheet</h4>
+            <div class="upload-area">
+              <img class="upload-icon" src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/46ed6e54-35db-43c5-81fb-aa7894ff3cb1.png" alt="Upload icon">
+              <p class="upload-text">Choose a file or drag & drop it here</p>
+              <p class="upload-subtext">JPEG, PNG, PDF formats, up to 5MB</p>
+              <label for="original-file-upload" class="browse-btn">Browse File</label>
+              <input type="file" id="original-file-upload" class="visually-hidden" accept=".jpeg,.jpg,.png,.pdf">
+            </div>
+          </div>
+          <div class="upload-box">
+            <h4 class="upload-title">Upload Student Answer Sheet</h4>
+            <div class="upload-area">
+              <img class="upload-icon" src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/7146d188-3609-4f49-bb21-d98036bbf2d8.png" alt="Upload icon">
+              <p class="upload-text">Choose a file or drag & drop it here</p>
+              <p class="upload-subtext">JPEG, PNG, PDF formats, up to 5MB</p>
+              <label for="student-file-upload" class="browse-btn">Browse File</label>
+              <input type="file" id="student-file-upload" class="visually-hidden" accept=".jpeg,.jpg,.png,.pdf">
+            </div>
+          </div>
+        </section>
+    
+        <button class="start-checking-btn">
+          Start's Checking
+          <img class="start-checking-icon" src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/690ca787-0ed4-4171-ad43-bd6e991a3e45.png" alt="Start icon">
+        </button>
+      </main>
+    
+      <footer class="footer">
+        <p>&copy; 2024 Auto Checker. All rights reserved.</p>
+      </footer>
+    </section>
+    

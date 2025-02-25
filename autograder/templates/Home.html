@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Home.css">
+  <title>Document</title>
+  <style>*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    :root {
+      --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+    }
+    
+    .landing-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    .landing-container * {
+      box-sizing: border-box;
+    }
+    
+    .visually-hidden {
+      color: #f3f9fa;
+      width: 1px;
+      height: 1px;
+      text-align: center;
+      margin-left: 250px;
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 96px;
+    }
+    
+    .logo {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 39px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 85px;
+    }
+    
+    .nav-item {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 21.72px;
+      text-transform: uppercase;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+      text-decoration: none;
+    }
+    
+    .nav-item:hover {
+        text-decoration:underline; /* Optional: Add underline on hover */
+      }
+    .sign-in-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 30px;
+      background: #000;
+      border: 2px solid #f3f9fa;
+      border-radius: 6px;
+      box-shadow: 0 0 5px 0 #f3f9fa;
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 21.72px;
+      letter-spacing: 0.06px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+    
+    .sign-in-btn:hover {
+        background-color: white; /* Change to white on hover */
+        color: #000
+      }
+
+      .sign-in-btn:hover img {
+        filter: invert(1); /* Invert the image colors for a dark logo effect */
+      }
+
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+      margin: 170px 0 0;
+      text-align: center;
+    }
+    
+    .hero-title {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 78px;
+      text-transform: uppercase;
+      letter-spacing: 7.2px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+    
+    .hero-subtitle {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2.8px;
+    }
+    
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px 92px;
+      background: #000;
+      border: 2px solid #f3f9fa;
+      border-radius: 6px;
+      box-shadow: 0 0 5px 0 #f3f9fa;
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 34.752px;
+      letter-spacing: 0.1px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+
+    .cta-button:hover{
+        background-color: white;
+        color: black;
+    }
+    
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      margin: 146px 96px 0;
+    }
+    
+    .section-title {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 52px;
+      text-align: center;
+      letter-spacing: 0.14px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+    
+    .about-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    
+    .about-text {
+      flex: 1;
+      max-width: 715px;
+    }
+    
+    .about-subtitle {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 23.892px;
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+      margin-bottom: 20px;
+    }
+    
+    .about-description {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+    
+    .about-image {
+      flex-shrink: 0;
+      width: 533px;
+      height: 350px;
+      background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/4928fbfc-c9d2-46a9-b772-e322cc805b81.png) no-repeat center;
+      background-size: cover;
+    }
+    
+    .how-it-works {
+      margin: 95px 96px 0;
+    }
+    
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    
+    .step-card {
+      width: 308px;
+      height: 280px;
+      background: #f3f9fa;
+      border-radius: 12px;
+      box-shadow: 0 0 20px 0 #f3f9fa;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-icon {
+      width: 64px;
+      height: 60px;
+      background: #000;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .step-title {
+      color: #000;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    
+    .step-description {
+      color: #000;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+    }
+    
+    .team-section {
+      margin: 95px 96px 0;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 50px;
+    }
+    
+    .team-card {
+      background: #f3f9fa;
+      border-radius: 12px;
+      box-shadow: 0 0 15px 0 #f3f9fa;
+      overflow: hidden;
+    }
+    
+    .team-image {
+      width: 100%;
+      height: 256px;
+      object-fit: cover;
+    }
+    
+    .team-info {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .team-name {
+      color: #000;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 8px;
+    }
+    
+    .team-role {
+      color: #000;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 20px;
+    }
+    
+    .team-contribution {
+      color: #000;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    
+    .contact-section {
+      margin: 100px 96px 0;
+    }
+    
+    .contact-container {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      background: rgba(243, 249, 250, 0.04);
+      border: 1px solid rgba(243, 249, 250, 0.5);
+      border-radius: 12px;
+      backdrop-filter: blur(190px);
+    }
+    
+    .contact-image {
+      flex: 1;
+      height: 463px;
+      background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/f5c91085-253d-48af-aeb6-7fe7a6bce28a.png) no-repeat center;
+      background-size: cover;
+    }
+    
+    .contact-form {
+      flex: 1;
+      padding: 40px;
+      background: rgba(243, 249, 250, 0.06);
+      border-radius: 6px;
+      backdrop-filter: blur(5px);
+    }
+    
+    .form-title {
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 39px;
+      text-align: center;
+      letter-spacing: 2.16px;
+      margin-bottom: 41px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(243, 249, 250, 0.05);
+      border: 1px solid rgba(243, 249, 250, 0.2);
+      border-radius: 5px;
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 14px;
+    }
+    
+    .form-input::placeholder {
+      color: rgba(243, 249, 250, 0.6);
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 13px 0;
+      background: #000;
+      border: 2px solid #f3f9fa;
+      border-radius: 6px;
+      box-shadow: 0 0 5px 0 #f3f9fa;
+      color: #f3f9fa;
+      font-family: 'h Hackout', var(--default-font);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.05px;
+      -webkit-text-stroke: 0.5px #f3f9fa;
+      cursor: pointer;
+    }
+
+    .form-submit:hover{
+        color: black;
+        background-color: white;
+        
+        
+    }
+    
+    .footer {
+      margin-top: 100px;
+      padding: 24px 96px;
+      text-align: center;
+    }
+    
+    .footer-text {
+      color: #f3f9fa;
+      font-family: Aldrich, var(--default-font);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15.204px;
+      letter-spacing: 0.04px;
+    }
+    </style>
+</head>
+<body>
+  <div class="landing-container">
+    <header class="header">
+      <h1 class="logo">Auto Checker</h1>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#how-it-works" class="nav-item">How it Works</a>
+        <a href="sign.html" class="nav-item">
+        <button class="sign-in-btn">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/ee9af97c-e8aa-4dd7-815f-4a4ee24a883d.png" alt="" width="24" height="24">
+          Sign In
+        </button>
+        </a>
+      </nav>
+    </header>
+  
+    <section class="hero-section">
+      <div>
+        <h2 class="visually-hidden">SIMPLIFY YOUR WORKFLOW TODAY WITH</h2>
+        <br><br>
+        <p class="hero-title">Automated Copy Grader</p>
+        <br><br>
+        <p class="hero-subtitle">Streamlined solutions tailored for your needs. Let's work smarter, not harder.</p>
+      </div>
+    <a href="sign.html">
+      <button class="cta-button">
+        Let's Start!
+      </button>
+    </a>
+    </section>
+  
+    <section id="about" class="about-section">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 class="about-subtitle">Smart Grading Exam Evaluation with Precision</h3>
+          <p class="about-description">The Automated Copy Grader System is designed to automate the process of grading students work by comparing it with the teacher's correct answers using Optical Character Recognition (OCR) technology and natural language processing techniques and to facilitate the grading process of exams using Python. This application serves as a solution to enhance the efficiency and accuracy of grading, By automating the grading of multiple-choice, true/false, short answers and paragraph answers.</p>
+        </div>
+        <div class="about-image" role="img" aria-label="Illustration of automated grading process"></div>
+      </div>
+    </section>
+  
+    <section id="how-it-works" class="how-it-works">
+      <h2 class="section-title">How it Works</h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-icon">
+            <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/66d84a4a-0f81-418f-b724-2ee50d007f6f.png" alt="" width="38" height="33">
+          </div>
+          <h3 class="step-title">Sign Up/Sign In</h3>
+          <p class="step-description">Create your account in just a few clicks using our secure platform.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/fadb5657-cb02-4f7c-b49d-d14835b47944.png" alt="" width="42" height="37.673">
+          </div>
+          <h3 class="step-title">Explore Tools</h3>
+          <p class="step-description">Choose the tools and resources tailored to your needs.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/3366db7e-4e61-4e97-b844-e6e4d09e4be2.png" alt="" width="44" height="43.993">
+          </div>
+          <h3 class="step-title">Achieve Goals</h3>
+          <p class="step-description">Leverage our solutions to maximize your efficiency and productivity.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="team-section">
+      <h2 class="section-title">Team Members</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/8b7fc56f-f6fb-4206-bebb-ae5827db7bc8.png" alt="Vipin" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Vipin</h3>
+            <p class="team-role">UI/UX Designer, Front-end & Python Developer</p>
+            <p class="team-contribution">Designed the UI for an automated Copy grading system in Figma, implemented a responsive front-end with HTML, CSS, and JavaScript, and contributed to the back-end by integrating Python-based grading logic.</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/03559cca-2cdd-42ef-bb99-b4ee07b0d685.png" alt="Utkarsh" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Utkarsh</h3>
+            <p class="team-role">Front-end Developer & Python Developer</p>
+            <p class="team-contribution">Designed the UI for an automated Copy grading system in Figma, implemented a responsive front-end with HTML, CSS, and JavaScript, and contributed to the back-end by integrating Python-based grading logic.</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/cb7ce87a-2d34-4481-b7d2-54525f0cf563.png" alt="Shashank" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Shashank</h3>
+            <p class="team-role">Data Analyst, Front-end & Python Developer</p>
+            <p class="team-contribution">Designed the UI for an automated Copy grading system in Figma, implemented a responsive front-end with HTML, CSS, and JavaScript, and contributed to the back-end by integrating Python-based grading logic.</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2024-12-22/25da936f-2038-485f-9f09-c3ebd633b59b.png" alt="Ankit" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Ankit</h3>
+            <p class="team-role">Front-end Developer & Python Developer</p>
+            <p class="team-contribution">Designed the UI for an automated Copy grading system in Figma, implemented a responsive front-end with HTML, CSS, and JavaScript, and contributed to the back-end by integrating Python-based grading logic.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-container">
+        <div class="contact-image" role="img" aria-label="Decorative image for contact section"></div>
+        <form class="contact-form">
+          <h3 class="form-title">We'd Love to Help</h3>
+          <div class="form-group">
+            
+            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First Name" required>
+          </div>
+          <div class="form-group">           
+            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Last Name" required>
+          </div>
+          <div class="form-group">  
+            <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone Number">
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-input" placeholder="Message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <p class="footer-text">&copy; 2024 Auto Checker. All rights reserved.</p>
+    </footer>
+  </div>
+  
+</body>
+</html>

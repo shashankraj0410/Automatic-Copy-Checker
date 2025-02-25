@@ -1,5 +1,7 @@
 # Automatic-Copy-Checker
 The Auto Grader project automates grading by using OCR and natural language processing to compare students' work with teachers' correct answers. It processes scanned images or PDFs, computes a similarity score between the texts, and analyzes sentiment for further insights.
+
+
 ![image](https://github.com/user-attachments/assets/18ea3190-2de9-4a4d-a9f2-ec51ccc7e95c)
 ![image](https://github.com/user-attachments/assets/176411b5-b4ab-479e-8cbb-c9ed5cc0bb59)
 

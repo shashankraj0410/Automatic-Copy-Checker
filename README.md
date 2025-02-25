@@ -86,15 +86,25 @@ Set the TESSDATA_PREFIX environment variable to the installation path and add th
 Copy
 auto-grader/
 ├── templates/               # Contains the HTML files for the Flask app
+
 │   └── index.html           # Upload form
+
 ├── static/                  # Static files like CSS, JS, etc.
+
 │   └── style.css            # CSS file for frontend styling
+
 ├── uploads/                 # Directory where uploaded images are temporarily saved
+
 ├── app.py                   # Flask application code
+
 ├── recog.py                 # OCR and image processing code
+
 ├── checksmswer.py           # Main logic for comparison, sentiment analysis, etc.
+
 ├── requirements.txt         # List of required Python packages
+
 └── README.md                # Project description and instructions
+
 
 # Running the Project
 Clone the repository:
@@ -114,17 +124,27 @@ Open your browser and go to http://127.0.0.1:5000/ to access the web interface.
 # Benefits
 
 1.Time-Saving for Teachers and Evaluators: Automates the grading process, reducing manual effort.
+
 2.Consistent Grading: Provides uniformity and consistency in grading, avoiding human bias.
+
 3.Immediate Feedback: Delivers near-instant feedback to students on their submissions.
+
 4.Scalability: Suitable for handling large volumes of submissions without additional manpower.
+
 5.Plagiarism Detection: Helps detect possible copying or plagiarism in handwritten assignments.
+
 
 # Limitations
 1.Accuracy of OCR: Struggles with unclear or messy handwriting.
+
 2.Dependency on Preprocessing: The quality of OCR results depends on effective preprocessing steps.
+
 3.Limited to Text-Based Evaluation: Not suitable for subjects that require diagrams, graphs, or complex equations.
+
 4.Spell-Checking Challenges: May introduce errors if the recognized text is inaccurate.
+
 5.Limited Contextual Understanding: Cannot assess the reasoning or logic behind answers in essays or complex questions.
+
 
 # Conclusion
 The Automatic Copy Grader is a transformative tool for educators, leveraging OCR, image processing, and AI-driven text analysis to automate the grading process. With future enhancements

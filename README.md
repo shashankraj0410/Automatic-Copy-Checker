@@ -26,7 +26,7 @@ Uses TextBlob to determine the polarity (positive or negative sentiment) and sub
 6.PDF Support:
 Supports both image files and PDF uploads. If a PDF is uploaded, it converts the pages into images for further processing.
 
-.Web Interface:
+7.Web Interface:
 Built using Flask, the web interface allows users to upload the teacher's and student's answer sheets. After submission, the results, including the recognized text, similarity percentage, and sentiment analysis, are displayed on the webpage.
 
 # Applications--
